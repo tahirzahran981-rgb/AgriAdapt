@@ -43,7 +43,7 @@ AgriAdapt/
    git clone https://github.com/USERNAME/AgriAdapt.git
 
 ## 👨‍💻 Tim Pengembang
-- Nama 1 – Frontend
+- Muh.Zahran Tahir 1 – Frontend
 - Nama 2 – Backend
 - Nama 3 – UI/UX
 
