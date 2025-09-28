@@ -1,0 +1,14 @@
+body {
+    background-color: #f0f8ff; /* warna biru muda */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: darkgreen; /* warna hijau tua */
+}
+
+p {
+    color: #333; /* abu-abu gelap */
+}
+
