@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriAdapt - Landing Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- Tambahkan script sebelum penutup body -->
+<script src="js/script.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SmartFarm • Cuaca & Rekomendasi Tanam</title>
+  <title>AgriAdapt • Cuaca & Rekomendasi Tanam</title>
   <meta name="description" content="Dashboard cuaca harian, rekomendasi tanam, notifikasi cuaca ekstrem, dan riwayat tanam Anda—semua dalam satu website." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,33 +21,44 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="container nav-wrap">
-      <div class="brand">
-        <div class="logo">SF</div>
-        <div class="title">SmartFarm</div>
-      </div>
-      <div class="nav-links">
-        <a href="#dashboard">Dashboard</a>
-        <a href="#dashboard">Cuaca</a>
-        <a href="#rekom">Rekomendasi</a>
-        <a href="#notifikasi">Notifikasi</a>
-        <a href="#riwayat">Riwayat</a>
-        <a href="#wireframe">Wireframe</a>
-        <button type="button" class="cta-btn" onclick="scrollToEl('#mulai')">Mulai</button>
-      </div>
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="container nav-wrap">
+    <div class="brand">
+      <img src="assets/images/logo-img.png" alt="Logo AgriAdapt" class="logo-img">
+      <div class="title">AgriAdapt</div>
     </div>
-  </nav>
+    <div class="nav-links" id="navLinks">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#dashboard">Cuaca</a>
+      <a href="#rekom">Rekomendasi</a>
+      <a href="#notifikasi">Notifikasi</a>
+      <a href="#riwayat">Riwayat</a>
+      <a href="#wireframe">Wireframe</a>
+    </div>
+    <div class="nav-actions">
+      <button type="button" class="cta-btn" onclick="scrollToEl('#mulai')">Mulai</button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#dashboard">Dashboard</a>
+  <a href="#dashboard">Cuaca</a>
+  <a href="#rekom">Rekomendasi</a>
+  <a href="#notifikasi">Notifikasi</a>
+  <a href="#riwayat">Riwayat</a>
+  <a href="#wireframe">Wireframe</a>
+</div>
 
   <!-- HERO -->
   <header class="hero">
     <div class="bg-blob" aria-hidden="true"></div>
     <div class="container hero-grid">
       <div>
-        <span class="tag">Versi: Template • Multi-file</span>
         <h1>Asisten Cuaca & Tanam <span style="color:var(--primary)">canggih</span> untuk kebun Anda</h1>
-        <p>Pantau cuaca realtime, dapatkan rekomendasi komoditas, dan simpan riwayat penanaman. Desain elegan, responsif, dan siap dikembangkan ke backend.</p>
+        <p>Monitor cuaca secara realtime, temukan rekomendasi tanaman terbaik, dan kelola riwayat penanaman dengan mudah.</p>
         <div class="stats">
           <div class="stat"><div class="num" id="statKota">—</div><div class="lbl">Lokasi</div></div>
           <div class="stat"><div class="num" id="statCuaca">—</div><div class="lbl">Cuaca Saat Ini</div></div>
@@ -258,9 +278,43 @@
   </div>
 </section>
 
-  <footer>
-    <div class="container">© <span id="y">2025</span> SmartFarm — Dibuat sebagai template pembelajaran (HTML + CSS + JS murni).</div>
-  </footer>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-wrap">
+    
+    <!-- Brand + Deskripsi -->
+    <div class="footer-brand">
+      <h2 class="brand-name">AgriAdapt</h2>
+      <p>Asisten canggih untuk cuaca & rekomendasi tanam.  
+      Pantau kondisi realtime, dapatkan rekomendasi, dan simpan riwayat tanam Anda.</p>
+    </div>
+
+    <!-- Tautan Navigasi -->
+    <div class="footer-links">
+      <h3>Tautan</h3>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#rekom">Rekomendasi</a></li>
+        <li><a href="#notifikasi">Notifikasi</a></li>
+        <li><a href="#riwayat">Riwayat</a></li>
+        <li><a href="#wireframe">Wireframe</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-legal">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="y">2025</span> AgriAdapt.
+  </div>
+</footer>
 
   <!-- Toast container -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
@@ -270,5 +324,6 @@
     window.OPENWEATHER_KEY = "1892b48b6f9df4ffa4b0158304dc2190";
   </script>
   <script src="./script.js" defer></script>
+
 </body>
 </html>
