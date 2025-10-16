@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- CSS di root -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
   <!-- NAVBAR -->
@@ -48,7 +48,13 @@
       <div class="hero-card">
         <h3>Cuaca Cepat</h3>
         <div class="row">
-          <input id="inputKota" class="input" placeholder="Masukkan kota, mis. Kendari" autocomplete="off" />
+          <label class="muted">Lokasi</label>
+          <select id="selectLokasi" onchange="updateRekom()">
+            <option>Kendari</option>
+            <option>Kolaka</option>
+            <option>Raha</option>
+          </select>
+<input id="inputTanggal" class="input" type="date" name="tanggal" />
           <button type="button" class="btn primary" onclick="fakeFetchWeather()">Lihat</button>
         </div>
         <div class="space"></div>
@@ -105,6 +111,11 @@
     <div class="card">
       <div class="grid grid-2">
         <div>
+          <label class="muted">Musim</label>
+          <select id="selectLokasi" onchange="updateRekom()">
+            <option>Hujan</option>
+            <option>Kemarau</option>
+          </select>
           <label class="muted">Pilih Komoditas</label>
           <select id="selectKomoditas" onchange="updateRekom()">
             <option>Padi</option>
