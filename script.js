@@ -107,7 +107,7 @@ function updateIKMFromSelections() {
   badge.className = "badge " + klass;
 }
 
-// ===== Ambil Cuaca Realtime + Forecast =====
+// ===== Ambil Cuaca Realtime + Forecast ===== ganti
 async function fakeFetchWeather() {
   const kota = ($("#inputKota").value || "").trim() || "Kendari";
   const key = window.OPENWEATHER_KEY;

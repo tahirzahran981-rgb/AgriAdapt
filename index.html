@@ -48,8 +48,17 @@
       <div class="hero-card">
         <h3>Cuaca Cepat</h3>
         <div class="row">
-          <input id="inputKota" class="input" placeholder="Masukkan kota, mis. Kendari" autocomplete="off" />
-          <button type="button" class="btn primary" onclick="fakeFetchWeather()">Lihat</button>
+          <select id="inputKota" class="input" onchange="fakeFetchWeather()">
+            <option value="">Pilih Kota</option>
+            <option value="Kendari">Kendari</option>
+            <option value="Kolaka">Kolaka</option>
+            <option value="Raha">Raha</option>
+            <option value="Baubau">Baubau</option>
+            <option value="Buton">Buton</option>
+           </select>
+
+           <input type="date" id="tanggal" class="input" onchange="fakeFetchWeather()">
+          
         </div>
         <div class="space"></div>
         <div class="grid grid-3">
@@ -105,6 +114,13 @@
     <div class="card">
       <div class="grid grid-2">
         <div>
+          <label class="muted">Pilih Musim</label>
+          <select id="selectMusim" onchange="updateRekom()">
+           <option>Hujan</option>
+           <option>Kemarau</option>
+           <option>Pancaroba</option>
+          </select>
+        <div class="space"></div>
           <label class="muted">Pilih Komoditas</label>
           <select id="selectKomoditas" onchange="updateRekom()">
             <option>Padi</option>
